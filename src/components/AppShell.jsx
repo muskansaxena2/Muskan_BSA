@@ -11,9 +11,11 @@ export default function AppShell({ children }) {
 
   return (
     <div className="relative min-h-screen bg-slate-100 text-slate-900 antialiased">
-      <header className="relative overflow-hidden rounded-b-[32px] bg-gradient-to-r from-slate-950 via-indigo-900 to-indigo-600 px-4 py-5 text-white shadow-2xl shadow-slate-400/20 sm:px-6">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.16),_transparent_28%)]" />
-        <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4">
+      <div className="pointer-events-none absolute inset-0 z-0 watermark-bg" />
+      <div className="relative z-10">
+        <header className="relative overflow-hidden rounded-b-[32px] bg-gradient-to-r from-slate-950 via-indigo-900 to-indigo-600 px-4 py-5 text-white shadow-2xl shadow-slate-400/20 sm:px-6">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.16),_transparent_28%)]" />
+          <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-white/15 shadow-inner shadow-white/10 ring-1 ring-white/10">
               <span className="text-xl">🏨</span>
@@ -44,8 +46,9 @@ export default function AppShell({ children }) {
             Explore hotels, collect your favourites, and choose the best stay with a stylish wishlist experience.
           </p>
         </div>
-      </header>
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">{children}</main>
+        </header>
+        <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">{children}</main>
+      </div>
     </div>
   )
 }
