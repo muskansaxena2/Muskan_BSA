@@ -8,14 +8,17 @@ export default function WishlistPage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-[32px] bg-white p-6 shadow-xl shadow-slate-200/40">
-        <div className="flex flex-col gap-4 rounded-[28px] border border-slate-200 bg-slate-50 p-6 sm:flex-row sm:items-center sm:justify-between">
+      {/* Wishlist Header */}
+      <section className="rounded-[32px] border-2 border-red-300 bg-gradient-to-r from-red-50 to-pink-50 px-8 py-8 shadow-lg">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h2 className="text-2xl font-semibold text-slate-900">Your wishlist</h2>
-            <p className="mt-2 text-sm text-slate-500">Plan your stay by saving the hotels that match your travel style.</p>
+            <h1 className="text-4xl sm:text-5xl font-black text-slate-900">❤️ MY WISHLIST - MY CHOICE</h1>
+            <p className="mt-3 text-slate-600 font-medium max-w-2xl">
+              Your saved hotels are here. Compare, review, and book the perfect stay for your next adventure!
+            </p>
           </div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
-            {wishlist.length} saved {wishlist.length === 1 ? 'hotel' : 'hotels'}
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500 px-6 py-3 text-white font-bold text-lg shadow-lg">
+            {wishlist.length} {wishlist.length === 1 ? 'Hotel' : 'Hotels'}
           </div>
         </div>
       </section>
